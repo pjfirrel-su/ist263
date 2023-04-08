@@ -1,0 +1,53 @@
+body {
+    background-color:#ffffff;
+    color:#000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+a {
+    color:#3d3ddd;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#000000;
+    font-size: 2em;
+}
+nav {
+    background-color:#000000;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+nav a {
+    color:#ffffff;
+    padding-left: 5px; padding-right: 5px;
+}
+nav a:hover {
+    background-color:#7aa9fca7;
+}
+.quote {float: right;}
+.part1 {display: flex; padding: 10px; margin: 10px;}
+.logo {width: 65px; height: auto;}
+.address {flex: 1; padding: 15px;}
+.links {flex: 3; padding: 15px;}
+.part1, .part2 {background-color:#d2d2d2; border-radius: 1em;}
+
+.part2 {display: flex; padding: 10px; margin: 10px; 
+        flex-wrap: wrap;}
+.form {flex: 1; padding: 15px;}
+.map {flex: 2; padding: 15px;}
+
+.indexbanner {max-width: 100%;}
+@media only screen and (max-width: 700px) {
+    nav a {size: 100%; display: block; padding: 5px;}
+}
+.skip {
+    background-color: #ffffff;
+    padding: 5px;
+    border: 1px solid #000000;
+    text-decoration: none;
+    position: absolute; /* position element relative to top left of viewport */
+    left: -999px; /* push it off the left side */
+}
+.skip:focus {
+    left: 10px; /* bring it back when they tab to it */
+}
