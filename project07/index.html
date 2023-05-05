@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixtape Magazine</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .mainflex {
+            margin-left: 60px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            margin-right: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .leftflex {
+            display: flex;
+            max-width: 950px;
+            flex-wrap: wrap;
+        }
+        .byline {
+            max-width: 500px;
+            line-height: 1.7em;
+        }
+        .headlineimage {
+            display: inline;
+            max-width: 420px;
+        }
+        .headlineflex {
+            display: flex;
+            max-width: 1000px;
+        }
+        h1 {
+            font-size: 2.5em;
+            position: relative;
+            top: -10px;
+        }
+        .latestflexbox {
+            display: flex;
+            margin-right: 25px;
+            flex-wrap: wrap;
+        }
+        .latestflexbox img {
+            max-width: 220px;
+        }
+        .latestflexbox h3 {
+            max-width: 220px;
+        }
+        .imagediv {
+            padding-right: 10px;
+        }
+        .textdiv {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .author {
+            position: relative;
+            top: -25px;
+        }
+        .h2 {
+            font-size: 3em;
+        }
+        .latestmiddle {
+            padding-right: 14px;
+        }
+        .timer {
+            max-width: 325px;
+            border: solid 2px #ffffff;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            border-radius: 0.5em;
+        }
+    </style>
+    <script>
+       
+        var countDownDate = new Date("Jun 10, 2023 00:00:00").getTime();
+
+        var x = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+
+    </script>
+</head>
+<body>
+    <div>
+        <a href="#main" class="skip" tabindex="1">Skip to Content</a>
+    </div>
+    <nav class="nav">
+        <div class="navlogo">
+            <img src="../images/mixtape_logo.png" alt="mixtape magazine logo" class="logo">
+        </div>
+        <div class="navlinks">
+            <a href="index.html">HOME</a>
+            <a href="articles.html">ARTICLES</a>
+            <a href="">ABOUT</a>
+        </div>
+    </nav>
+
+    <div class="mainflex">
+        <div class="leftflex">
+            <article class="headlineflex" id="main">
+                <div class="imagediv">
+                    <img src="../images/sos.jpg" alt="s.o.s. album cover" class="headlineimage">
+                </div>
+                <div class="textdiv">
+                    <a href="individual-article.html">
+                        <h1>SZA'S MAGNUM OPUS: A REVIEW OF SOS</h1>
+                    </a>
+                    <h3 class="author">By Noah Weinberg</h3>
+                    <br>
+                    <p class="byline">
+                        "Sitting at over 68 minutes, SOS is sprawling in its density and theatricality. Grander and more vulnerable than any previous work, SZA tapped into a plethora of genres and sounds, smacking most of her attempts out of the park." 
+                    </p>
+                </div>
+            </article>
+            <section class="latestsection">
+                <h2>LATEST</h2>
+                <div class="latestflexbox">
+                    <article class="latestmiddle">
+                        <img src="../images/lets_start_here.jpg" alt="let's start here album cover">
+                        <h3>ALBUM REVIEW: LET'S START HERE</h3>
+                    </article>
+                    <article class="latestmiddle">
+                        <img src="../images/worst_rappers.jpg" alt="worst rappers of all time">
+                        <h3>TOP 5 WORST RAPPERS OF ALL TIME</h3>
+                    </article>
+                    <article class="latestmiddle">
+                        <img src="../images/vivienne_westwood.jpg" alt="vivienne westwood">
+                        <h3>VIVIENNE WESTWOOD AND RAP'S LOVE FOR PUNK</h3>
+                    </article>
+                    <article>
+                        <img src="../images/rave.jpg" alt="rave album cover">
+                        <h3>SKAIWATER - RAVE, REVIEWED</h3>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <div>
+            <aside class="rightflex">
+                <div>
+                    <iframe src="https://open.spotify.com/embed/playlist/0gm9y5q4nVcmoYuOBdniFV?utm_source=generator" width="340" height="620" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div>
+                    <p class="timer">COUNTDOWN TO NEXT PRINT ISSUE:<br><br><span id="countdown"></span></p>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <a href="https://www.instagram.com/mixtapemag_su/">Instagram</a>
+            <a href="https://twitter.com/mixtapemag_su">Twitter</a>
+            <a href="https://open.spotify.com/user/fna0vrjfnupzjg0z13x9chabs?si=f413ecdffd0e400a&nd=1">Spotify</a>
+        </div>
+        <p class="copyright">&#169; Mixtape Magazine</p>
+    </footer>
+</body>
+</html>
